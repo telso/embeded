@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "embeded"
+  "defaultProject": "embeded",
+  "cli": {
+    "analytics": false
+  }
 }

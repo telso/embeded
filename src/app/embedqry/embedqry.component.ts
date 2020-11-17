@@ -36,13 +36,13 @@ export class EmbedqryComponent implements OnInit ,OnChanges  {
   ngOnInit(): void {
     this.advpl = 'cQuery := " SELECT A1_CGC, A1_COD, A1_LOJA"+Chr(13)+Chr(10)\n';
     this.advpl += 'cQuery += " FROM "+RetSqlName("SA1")+" SA1 "+Chr(13)+Chr(10)\n';
-    this.advpl += 'cQuery += " WHERE A1_FILIAL = '+"'"+'"+xFilial("SA1")+"'+"'"+' AND "+Chr(13)+Chr(10)\n';
+    this.advpl += 'cQuery += " WHERE A1_FILIAL = '+"'"+'"+xFilial("SA1")+"'+"'"+'"+Chr(13)+Chr(10)\n';
     this.advpl += 'If nCond==1\n';
-    this.advpl += '   cQuery += " A1_PESSOA = '+"'"+'F'+"'"+' AND "+Chr(13)+Chr(10)\n';
+    this.advpl += '   cQuery += " AND A1_PESSOA = '+"'"+'F'+"'"+'"+Chr(13)+Chr(10)\n';
     this.advpl += 'Else\n';
-    this.advpl += '   cQuery += " A1_PESSOA = '+"'"+'J'+"'"+' AND "+Chr(13)+Chr(10)\n';
+    this.advpl += '   cQuery += " AND A1_PESSOA = '+"'"+'J'+"'"+'"+Chr(13)+Chr(10)\n';
     this.advpl += 'EndIf\n';
-    this.advpl += 'cQuery += " SA1.D_E_L_E_T_ ='+"' '"+' "'+'+Chr(13)+Chr(10)\n';
+    this.advpl += 'cQuery += " AND SA1.D_E_L_E_T_ ='+"' '"+' "'+'+Chr(13)+Chr(10)\n';
     this.sql = '';
     this.alias = 'cAliastmp';
     this.temif = true;
